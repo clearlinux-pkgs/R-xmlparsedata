@@ -4,7 +4,7 @@
 #
 Name     : R-xmlparsedata
 Version  : 1.0.3
-Release  : 3
+Release  : 4
 URL      : https://cran.r-project.org/src/contrib/xmlparsedata_1.0.3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/xmlparsedata_1.0.3.tar.gz
 Summary  : Parse Data of 'R' Code as an 'XML' Tree
@@ -13,31 +13,27 @@ License  : MIT
 BuildRequires : buildreq-R
 
 %description
-# xmlparsedata
-> Parse Data of R Code as an 'XML' Tree
-[![Linux Build Status](https://travis-ci.org/r-lib/xmlparsedata.svg?branch=master)](https://travis-ci.org/r-lib/xmlparsedata)
-[![Windows Build status](https://ci.appveyor.com/api/projects/status/github/r-lib/xmlparsedata?svg=true)](https://ci.appveyor.com/project/gaborcsardi/xmlparsedata)
-[![](http://www.r-pkg.org/badges/version/xmlparsedata)](http://www.r-pkg.org/pkg/xmlparsedata)
-[![CRAN RStudio mirror downloads](http://cranlogs.r-pkg.org/badges/xmlparsedata)](http://www.r-pkg.org/pkg/xmlparsedata)
-[![Coverage Status](https://img.shields.io/codecov/c/github/r-lib/xmlparsedata/master.svg)](https://codecov.io/github/r-lib/xmlparsedata?branch=master)
+tree, that one can search via 'XPath', and easier to manipulate in
+    general.
 
 %prep
 %setup -q -c -n xmlparsedata
+cd %{_builddir}/xmlparsedata
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1570112239
+export SOURCE_DATE_EPOCH=1589533787
 
 %install
-export SOURCE_DATE_EPOCH=1570112239
+export SOURCE_DATE_EPOCH=1589533787
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
