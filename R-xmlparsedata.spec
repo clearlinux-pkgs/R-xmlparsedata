@@ -4,7 +4,7 @@
 #
 Name     : R-xmlparsedata
 Version  : 1.0.4
-Release  : 6
+Release  : 7
 URL      : https://cran.r-project.org/src/contrib/xmlparsedata_1.0.4.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/xmlparsedata_1.0.4.tar.gz
 Summary  : Parse Data of 'R' Code as an 'XML' Tree
